@@ -47,7 +47,7 @@ the_art_of_food/
 
 ## 📬 Contact
 
-Created by [Zachary Allison](https://github.com/zzinimo).  
+Created by [Zachary Zinimon](https://github.com/zzinimo).  
 Feel free to reach out for feedback or collaboration!
 
 ---
