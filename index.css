@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Edu+SA+Hand:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poiret+One&family=Quicksand:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Edu+SA+Hand:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poiret+One&family=Quicksand:wght@300..700&family=Ribeye+Marrow&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 55px;
+}
+
+.header__title {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 600;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.header__search-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.header__search-icon:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transform: scale(1.3);
+}
+
+.header__nav-item {
+  list-style-type: none;
+}
+
+.header__nav-link {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  font-family: "open sans", sans-serif;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.header__nav-link:hover {
+  color: #ff6b6b; /* Change color on hover */
+}
+
+.image-container {
+  position: relative;
+  max-width: 95vw;
+  width: 95vw;
+  height: 90vh;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  display: block; /* Ensures the image is treated as a block element */
+  z-index: 0;
+  position: relative; /* Position relative to allow absolute positioning of overlay */
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* black with 40% opacity */
+  z-index: 1; /* Ensure overlay is above the image */
+}
+
+.image-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Center text inside the container */
+  z-index: 2; /* Ensure text is above the overlay */
+}
+
+.image__title {
+  color: white;
+  font-size: 44px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.image__description {
+  color: white;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.image__button {
+  width: 100px;
+  height: 30px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  margin-top: 20px;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.3s;
+}
+
+.values__title {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Poiret One", sans-serif;
+  font-size: 52px;
+}
+
+.values__container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 48px;
+}
+
+.value {
+  font-size: 24px;
+}
+
+.values__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 20px 0;
+  /* border: 2px solid black; */
+  padding: 30px;
+  /* border-radius: 5px; */
+}
+
+.value__icon-img {
+  width: 25px;
+  transition: transform 0.3s;
+}
+
+.values__item:hover .value__icon-img {
+  transform: scale(1.2);
+}
+
+.image__button:hover {
+  background-color: white;
+  color: black;
+}
+
+.products {
+  max-width: 95vw;
+}
+
+.product {
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products__title {
+  font-family: "Poiret One", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive grid */
+  margin: 0 auto;
+  max-width: 1500px;
+  justify-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product__image {
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.product__title {
+  font-family: "Poiret One", sans-serif;
+  margin-top: 10px;
+}
+
+.product__description {
+  font-family: "Open Sans", sans-serif;
+  margin-top: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logos {
+  display: flex;
+  gap: 30px;
+}
+
+.footer__logo {
+  width: 20px;
+  height: 20px;
+  margin: 10px auto 0;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.footer__logo:hover {
+  transform: scale(1.2);
+}
+
+.footer__copyright {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: black;
+  margin: 10px 0 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.popup-overlay-opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: visible;
+  opacity: 1; /* Fully visible when opened */
+}
+
+.popup-form {
+  background: rgb(255, 255, 255);
+  padding: 2em;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90vw;
+  position: relative;
+}
+
+.fieldset {
+  border: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close__button {
+  background-image: url("./images/close.svg");
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background-color: transparent;
+}
+
+.close__button:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.legend {
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.form__label {
+  margin-bottom: 5px;
+  display: block;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+.form__input {
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 32px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.input-error {
+  border: 1px solid red; /* Red border for input errors */
+  outline: 2px solid red;
+}
+
+.input-success {
+  border: 1px solid green; /* Green border for input success */
+  outline: 2px solid green;
+}
+
+.submit__button {
+  font-family: "open sans", sans-serif;
+  width: 100px;
+  height: 30px;
+  transition: background-color 0.5s, color 0.3s;
+  font-weight: 600;
+}
+
+.submit__button:hover {
+  background-color: #ff6b6b; /* Change color on hover */
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.error {
+  color: red;
+}
+
+.disabled {
+  background-color: #ccc; /* Grey background for disabled state */
+  color: #666; /* Dark grey text for disabled state */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+  border: 1px solid #999; /* Lighter border for disabled state */
+}
+.disabled:hover {
+  background-color: #ccc; /* Grey background for disabled state */
+  color: #666; /* Dark grey text for disabled state */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+  border: 1px solid #999; /* Lighter border for disabled state */
+}
