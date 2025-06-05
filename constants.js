@@ -48,3 +48,10 @@ export default class Product {
     return actualProduct;
   }
 }
+function wait(ms) {
+  return (newPromise = new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  }));
+}
+
+wait(2000).then(() => console.log("2000ms has passed"));
