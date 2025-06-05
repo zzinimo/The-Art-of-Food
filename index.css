@@ -390,23 +390,23 @@
   }
   .image-container {
     width: 100%;
-    height: 60vh; /* Adjust height for smaller screens */
+    height: 60vh;
   }
   .image__title {
-    font-size: 32px; /* Adjust title size for smaller screens */
+    font-size: 32px;
   }
   .image__description {
-    font-size: 18px; /* Adjust description size for smaller screens */
+    font-size: 18px;
   }
   .image__button {
-    width: 80px; /* Adjust button size for smaller screens */
+    width: 80px;
     height: 25px;
   }
   .values__title {
-    font-size: 36px; /* Adjust title size for smaller screens */
+    font-size: 36px;
   }
   .values__container {
-    flex-direction: column; /* Stack values vertically on smaller screens */
+    flex-direction: column;
     align-items: center;
   }
 }
